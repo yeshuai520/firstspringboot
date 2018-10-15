@@ -16,6 +16,7 @@ public class UserController {
     @GetMapping("list")
     public R list() {
         try {
+
             return R.isOk().data(userService.list());
         } catch (Exception e) {
             return R.isFail(e);
